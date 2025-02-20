@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+  float length, width, area;
+
+  printf("Enter the length of the rectangle: ");
+  scanf("%f", &length);
+
+  printf("Enter the width of the rectangle: ");
+  scanf("%f", &width);
+
+  area = length * width;
+
+  printf("The area of the rectangle is: %.2f\n", area); // %.2f formats to 2 decimal places
+
+  return 0;
+}
+#include <stdio.h>
+#include <math.h> // Include math library for pow() function
+
+int main() {
+    float principal, time, rate, compoundInterest, amount;
+    int n = 1; // Compounding annually
+
+    printf("Enter principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter time (in years): ");
+    scanf("%f", &time);
+
+    printf("Enter rate of interest: ");
+    scanf("%f", &rate);
+
+    amount = principal * pow((1 + rate / (n * 100)), n * time);
+
+    compoundInterest = amount - principal;
+
+    printf("Amount after compound interest = %.2f\n", amount);
+    printf("Compound Interest = %.2f\n", compoundInterest);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    float principal, time, rate, simpleInterest;
+
+    printf("Enter principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter time (in years): ");
+    scanf("%f", &time);
+
+    printf("Enter rate of interest: ");
+    scanf("%f", &rate);
+
+    simpleInterest = (principal * time * rate) / 100;
+
+    printf("Simple Interest = %.2f\n", simpleInterest);
+
+    return 0;
+}
